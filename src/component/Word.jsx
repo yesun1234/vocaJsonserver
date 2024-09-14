@@ -1,20 +1,22 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import WordCheck from "./WordCheck";
+import useFetch from "../hooks/useFetch";
 const Word = () => {
   const { day } = useParams();
-  const [words, setWords] = useState([]);
+  const words = useFetch(`http://localhost:3001/words?day=${day}`)
+  // const [words, setWords] = useState([]);
 
 
-    useEffect(() => {
-      fetch(`http://localhost:3001/words?day=${day}`)
-      .then(res => {
-        return res.json();
-      })
-      .then(data => {
-        setWords(data);
-      });
-    },[day]);
+  //   useEffect(() => {
+  //     fetch(`http://localhost:3001/words?day=${day}`)
+  //     .then(res => {
+  //       return res.json();
+  //     })
+  //     .then(data => {
+  //       setWords(data);
+  //     });
+  //   },[day]);
   return (
     <div className="word">
       <h2>Day {day}</h2>

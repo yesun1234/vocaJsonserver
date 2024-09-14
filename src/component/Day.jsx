@@ -1,19 +1,21 @@
-import React, { useEffect, useState } from "react";
-import dummy from "../db/data.json";
+import React, { /*useEffect, useState */} from "react";
 import { Link } from "react-router-dom";
+import useFetch from "../hooks/useFetch";
 
 const Day = () => {
-  const [days, setDays]=useState([]);
+  const days = useFetch('http://localhost:3001/days');
+  
+  // const [days, setDays]=useState([]);
 
-  useEffect(() => {
-    fetch('http://localhost:3001/days')
-    .then(res => {
-      return res.json();
-    })
-    .then(data => {
-      setDays(data);
-    });
-  },[]);
+  // useEffect(() => {
+  //   fetch('http://localhost:3001/days')
+  //   .then(res => {
+  //     return res.json();
+  //   })
+  //   .then(data => {
+  //     setDays(data);
+  //   });
+  // },[]);
   return (
     <div className="day">
       <ul>
