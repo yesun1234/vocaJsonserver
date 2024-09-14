@@ -1,0 +1,118 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+.app {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+.header {
+  padding: 30px;
+  display: flex;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header div:first-child h2 {
+  flex: 1;
+  text-align: center;
+}
+.header div:first-child a {
+  color: #333;
+  text-decoration: none;
+}
+.header div:nth-child(2) {
+  margin-left: 30px;
+}
+.header button {
+  padding: 15px 21px 13px 21px;
+  border: none;
+  border-radius: 8px;
+  background: #0d6efd;
+  color: #fff;
+  font-size: 18px;
+  margin-left: 10px;
+  font-weight: 600;
+}
+.day ul {
+  list-style-type: none;
+  margin: 0 auto;
+  padding: 0;
+  width: fit-content;
+  display: flex;
+}
+.day {
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 90px;
+}
+.day ul li a {
+  text-decoration: none;
+  color: #333;
+  padding: 15px 21px 13px 21px;
+  border: none;
+  border-radius: 8px;
+  background: #0d6efd;
+  color: #fff;
+  font-size: 18px;
+  margin-left: 10px;
+  font-weight: 600;
+}
+.word {
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  font-size: 20px;
+}
+.word table {
+  list-style-type: none;
+  margin: 0 auto;
+  padding: 0;
+  width: fit-content;
+}
+.word button {
+  text-decoration: none;
+  color: #333;
+  padding: 15px 21px 13px 21px;
+  border: none;
+  border-radius: 8px;
+  background: #0d6efd;
+  color: #fff;
+  font-size: 18px;
+  margin-left: 10px;
+  font-weight: 600;
+}
+.word table {
+  border: 1px solid #999;
+  border-collapse: collapse;
+}
+.word table td {
+  text-align: center;
+  padding: 10px 30px;
+}
+.word table td,
+tr {
+  border: 1px solid #999;
+}
+.word td button:nth-child(2) {
+  background-color: #dc3545;
+}
+.off td {
+  background: #eee;
+  color: #ccc;
+}
