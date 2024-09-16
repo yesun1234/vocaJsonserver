@@ -1,16 +1,25 @@
 {
-    "days": [
-      { "id": 1, "day": 1 },
-      { "id": 2, "day": 2 },
-      { "id": 3, "day": 3 }
-    ],
-    "words": [
-      { "day": 1, "eng": "book", "kor": "책", "isDone": true },
-      { "day": 1, "eng": "pen", "kor": "펜", "isDone": false },
-      { "day": 2, "eng": "apple", "kor": "사과", "isDone": false },
-      { "day": 2, "eng": "school", "kor": "학교", "isDone": true },
-      { "day": 3, "eng": "blue", "kor": "파랑", "isDone": false },
-      { "day": 3, "eng": "red", "kor": "빨강", "isDone": true }
-    ]
-  }
-  
+  "days": [
+    {
+      "id": "1",
+      "day": 1
+    },
+    {
+      "id": "2",
+      "day": 2
+    },
+    {
+      "id": "3",
+      "day": 3
+    }
+  ],
+  "words": [
+    {
+      "id": "6",
+      "day": 3,
+      "eng": "red",
+      "kor": "빨강",
+      "isDone": true
+    }
+  ]
+}
