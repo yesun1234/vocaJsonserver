@@ -112,6 +112,20 @@
       "eng": "monkey",
       "kor": "원숭이",
       "isDone": true
+    },
+    {
+      "id": "2468",
+      "day": "4",
+      "eng": "drink",
+      "kor": "마시다",
+      "isDone": false
+    },
+    {
+      "id": "af67",
+      "day": "5",
+      "eng": "jucie",
+      "kor": "쥬스",
+      "isDone": false
     }
   ]
 }

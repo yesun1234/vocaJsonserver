@@ -20,7 +20,7 @@ const Word = () => {
   return (
     <div className="word">
       <h2>Day {day}</h2>
-
+      {words.length === 0 && <span>LODING...</span>}
       <table>
         <tbody>
           {words.map(word => (

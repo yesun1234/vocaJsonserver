@@ -1,34 +1,39 @@
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
 import useFetch from '../hooks/useFetch'
 import { useNavigate } from 'react-router-dom';
 
 const CreateWord = () => {
     const days = useFetch('http://localhost:3001/days');
     const history = useNavigate();
+    const [isLoading, setIsLoading] = useState(false);
 
     const onSubmit = (e) => {
         e.preventDefault();
-        console.log(dayRef.current.value);
-        console.log(korRef.current.value);
-        console.log(engRef.current.value);
-    
-            fetch(`http://localhost:3001/words/`,{
-                method : "POST",
-                headers : {
-                    "Content-Type" : "application/json"
-                },
-                body : JSON.stringify({
-                    day : dayRef.current.value,
-                    eng : engRef.current.value,
-                    kor : korRef.current.value,
-                    isDone : false
+        if(!isLoading){
+            setIsLoading(true)
+            console.log(dayRef.current.value);
+            console.log(korRef.current.value);
+            console.log(engRef.current.value);
+        
+                fetch(`http://localhost:3001/words/`,{
+                    method : "POST",
+                    headers : {
+                        "Content-Type" : "application/json"
+                    },
+                    body : JSON.stringify({
+                        day : dayRef.current.value,
+                        eng : engRef.current.value,
+                        kor : korRef.current.value,
+                        isDone : false
+                    })
+                }).then(res=>{
+                    if(res.ok){
+                        alert("생성이 완료되었습니다."); 
+                        history(`/day/${dayRef.current.value}`)
+                        setIsLoading(false)
+                    }
                 })
-            }).then(res=>{
-                if(res.ok){
-                    alert("생성이 완료되었습니다."); 
-                    history(`/day/${dayRef.current.value}`)
-                }
-            })
+            }
         }
     const engRef = useRef(null);
     const korRef = useRef(null);
@@ -52,7 +57,7 @@ const CreateWord = () => {
         </select>
     </div>
     <div className='input_area'></div>
-    <button>저장</button>
+    <button style={{"opacity" : isLoading ? 0.3 : 1}}>{isLoading ? "Saving" : "저장" }</button>
    </form>
   )
 }
