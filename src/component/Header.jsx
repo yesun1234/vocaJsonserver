@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import CreateWord from "./CreateWord";
 
 const Header = () => {
   return (
@@ -10,8 +11,16 @@ const Header = () => {
         </h2>
       </div>
       <div>
-        <button>단어 추가</button>
-        <button>Day 추가</button>
+        <button>
+          <Link to="create_word">
+            단어 추가
+          </Link>
+          </button>
+        <button>
+          <Link to="create_day">
+            Day 추가
+          </Link>
+          </button>
       </div>
     </div>
   );
